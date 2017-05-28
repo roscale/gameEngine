@@ -36,7 +36,7 @@ public class game extends PApplet
 		{
 			Peashooter peashooter = new Peashooter();
 			peashooters.add(peashooter);
-			peashooter.getComponent(Transform.class).setPosition(200, 200);
+			peashooter.transform.setPosition(200f, 200f);
 		}
 
 		// a = new Animation(Globals.peashooterSprite, 3, 1);

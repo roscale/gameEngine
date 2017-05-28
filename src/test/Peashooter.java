@@ -13,7 +13,7 @@ class Peashooter extends Living
 		getComponent(Transform.class).setZ(-1);
 		getComponent(SpriteRenderer.class).setSprite(Globals.peashooterSprite);
 //		getComponent(SpriteRenderer.class).setFrameRate(10);
-		getComponent(SpriteRenderer.class).setRelativePosition(new PVector(-100, -100));
+		getComponent(SpriteRenderer.class).setOffset(-100, -100);
 		getComponent(Collider.class).setSize(getComponent(SpriteRenderer.class).getSpriteSize());
 		getComponent(Input.class).setSize(getComponent(SpriteRenderer.class).getSpriteSize());
 

@@ -7,8 +7,6 @@ import processing.core.PVector;
  */
 public class SpriteRenderer extends Component implements IDrawable
 {
-	public PVector relPos = new PVector(0, 0);
-
 	public Sprite sprite;
 	Timer frameRateTimer = null;
 	Counter frameCounter = null;
@@ -20,9 +18,6 @@ public class SpriteRenderer extends Component implements IDrawable
 		addToManager(DrawingManager.instance());
 		addToManager(SpriteManager.instance());
 	}
-
-	public PVector getPosition() { return PVector.add(gameObject.transform.getPosition(), relPos); }
-	public void setRelativePosition(PVector newPos) { relPos.set(newPos); }
 
 	public void setSprite(Sprite sprite)
 	{

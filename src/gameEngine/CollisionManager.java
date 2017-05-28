@@ -1,5 +1,6 @@
 package gameEngine;
 
+import java.lang.*;
 import java.util.ArrayList;
 
 /**
@@ -136,7 +137,7 @@ class Pair
 	}
 
 	@Override
-	public boolean equals(Object other)
+	public boolean equals(java.lang.Object other)
 	{
 		Pair p = (Pair) other;
 		if (p == null)
@@ -146,16 +147,3 @@ class Pair
 				(first == p.second && second == p.first);
 	}
 }
-
-//	public ArrayList<Collider> refresh()
-//	{
-//		colliders = new ArrayList<>();
-//
-//		for (int i = 0; i < World.list.size(); i++)
-//		{
-//			Collider col;
-//			if ((col = World.list.get(i).getComponent(Collider.class)) != null)
-//				colliders.addComponent(col);
-//		}
-//		return colliders;
-//	}

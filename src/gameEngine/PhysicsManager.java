@@ -21,35 +21,35 @@ public class PhysicsManager extends ComponentManager
 //	private ExecutorService executor = Executors.newFixedThreadPool(8);
 //	private CountDownLatch latch;
 
-	private ArrayList<Physics> componentList = new ArrayList<>();
+	private ArrayList<Physics> physics = new ArrayList<>();
 
 	@Override
 	public boolean containsComponent(Component component)
 	{
-		return false;
+		return physics.contains(component);
 	}
 
 	@Override
 	public void addComponent(Component component)
 	{
-		componentList.add((Physics) component);
+		physics.add((Physics) component);
 	}
 
 	@Override
 	public void removeComponent(Component component)
 	{
-		componentList.remove(component);
+		physics.remove(component);
 	}
 
 	@Override
 	public void updateComponents()
 	{
-		for (int i = 0; i < componentList.size(); i++)
-			componentList.get(i).step();
+		for (int i = 0; i < physics.size(); i++)
+			physics.get(i).step();
 
-//		latch = new CountDownLatch(componentList.size());
+//		latch = new CountDownLatch(physics.size());
 //
-//		for (Physics physics : componentList)
+//		for (Physics physics : physics)
 //			executor.submit(new UpdatePhysicsComponent(physics, latch));
 //
 //		try
@@ -65,8 +65,8 @@ public class PhysicsManager extends ComponentManager
 	@Override
 	public void debug()
 	{
-		for (int i = 0; i < componentList.size(); i++)
-			componentList.get(i).debug();
+		for (int i = 0; i < physics.size(); i++)
+			physics.get(i).debug();
 	}
 }
 

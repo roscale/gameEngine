@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Created by roscale on 4/20/17.
  */
-public abstract class GameObject
+public abstract class GameObject extends Object
 {
 	public ArrayList<Component> components = new ArrayList<>();
 	public Transform transform; // Shortcut
@@ -18,6 +18,7 @@ public abstract class GameObject
 		World.addGameObject(this);
 	}
 
+	@Override
 	public void destroy()
 	{
 		// User callback
@@ -48,18 +49,6 @@ public abstract class GameObject
 			return null;
 		}
 	}
-
-	public <T extends Component> void removeComponent(Class<T> c)
-	{
-		Component component = getComponent(c);
-		if (component != null)
-		{
-			component.disable();
-			components.remove(component);
-		}
-	}
-
-	public ArrayList<Component> getComponents() { return components; }
 
 	public <T extends Component> T getComponent(Class<T> c)
 	{

@@ -7,28 +7,30 @@ import processing.core.PVector;
  */
 public class Transform extends Component
 {
-	private PVector pos = new PVector();
-
 	public Transform(GameObject gameObject) { super(gameObject); }
 
-	public PVector getPosition() { return pos; }
-	public void setPosition(PVector pos) { setPosition(pos.x, pos.y); }
-	public void setPosition(float x, float y) { this.pos.set(x, y); }
-
-	public void setZ(float z)
+	@Override
+	public PVector getPosition() { return offset; }
+	public Transform setPosition(PVector pos) { return setPosition(pos.x, pos.y); }
+	public Transform setPosition(float x, float y) { setOffset(x, y); return this; }
+	public Transform setZ(float z)
 	{
-		this.pos.z = z;
+		this.offset.z = z;
 		DrawingManager.instance().sort();
+		return this;
 	}
+
+	public Transform translate(PVector vec) { return translate(vec.x, vec.y); }
+	public Transform translate(float x, float y) { setPosition(PVector.add(getPosition(), new PVector(x, y))); return this; }
 
 	@Override
 	public void debug()
 	{
 		// Show
-		Helper.drawDebuggingBox(World.p, pos, new PVector(3, 3), new PVector(0, 0, 0), true);
+		Helper.drawDebuggingBox(World.p, getPosition(), new PVector(3, 3), new PVector(0, 0, 0), true);
 
 		// Print
 		System.out.println(Helper.colorify("[" + getClass().getSimpleName() + "]", Helper.Colors.FG_BLUE, null));
-		System.out.println("Position: " + pos);
+		System.out.println("Position: " + getPosition());
 	}
 }
