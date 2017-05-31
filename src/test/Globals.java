@@ -1,6 +1,6 @@
 package test;
 
-import gameEngine.Sprite;
+import gameEngine.util.Sprite;
 
 /**
  * Created by roscale on 4/20/17.

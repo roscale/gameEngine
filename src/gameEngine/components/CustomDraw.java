@@ -1,11 +1,16 @@
-package gameEngine;
+package gameEngine.components;
+
+import gameEngine.Component;
+import gameEngine.GameObject;
+import gameEngine.components.callbacks.IDrawable;
+import gameEngine.managers.DrawingManager;
 
 /**
  * Created by roscale on 5/6/17.
  */
 public class CustomDraw extends Component implements IDrawable
 {
-	CustomDraw(GameObject gameObject)
+	public CustomDraw(GameObject gameObject)
 	{
 		super(gameObject);
 		addToManager(DrawingManager.instance());

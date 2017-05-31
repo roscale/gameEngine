@@ -1,4 +1,4 @@
-package gameEngine;
+package gameEngine.util;
 
 import processing.core.PApplet;
 import processing.core.PVector;
@@ -53,7 +53,7 @@ public abstract class Helper
 		p.popStyle();
 	}
 
-	static class Colors
+	public static class Colors
 	{
 		public static final int FG_BLACK = 30;
 		public static final int FG_RED = 31;

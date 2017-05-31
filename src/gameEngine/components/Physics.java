@@ -1,5 +1,9 @@
-package gameEngine;
+package gameEngine.components;
 
+import gameEngine.Component;
+import gameEngine.GameObject;
+import gameEngine.util.Helper;
+import gameEngine.managers.PhysicsManager;
 import processing.core.PVector;
 
 /**
@@ -11,17 +15,11 @@ public class Physics extends Component
 	public PVector acceleration = new PVector();
 	public float drag = 1f;
 
-	Physics(GameObject gameObject)
+	public Physics(GameObject gameObject)
 	{
 		super(gameObject);
 		addToManager(PhysicsManager.instance());
 	}
-
-	@Override
-	public void enable() { enabled = true; }
-
-	@Override
-	public void disable() { enabled = false; }
 
 	public void step()
 	{

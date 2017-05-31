@@ -1,5 +1,10 @@
-package gameEngine;
+package gameEngine.components;
 
+import gameEngine.Component;
+import gameEngine.GameObject;
+import gameEngine.util.Helper;
+import gameEngine.World;
+import gameEngine.managers.CollisionManager;
 import processing.core.PVector;
 
 import java.util.ArrayList;
@@ -10,7 +15,6 @@ import java.util.ArrayList;
 
 public class Collider extends Component
 {
-	public PVector relPos = new PVector(0, 0);
 	public PVector size = new PVector(0, 0);
 
 	public ArrayList<GameObject> collisions = new ArrayList<>();
@@ -21,10 +25,7 @@ public class Collider extends Component
 		addToManager(CollisionManager.instance());
 	}
 
-	public PVector getPosition() { return PVector.add(gameObject.transform.getPosition(), relPos); }
 	public PVector getSize() { return size; }
-
-	public void setRelativePosition(PVector newPos) { relPos.set(newPos); }
 	public void setSize(PVector newSize) { size.set(newSize); }
 
 	public boolean containsPoint(PVector point) { return Helper.containsPoint(getPosition(), getSize(), point); }

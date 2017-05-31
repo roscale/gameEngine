@@ -1,4 +1,6 @@
-package gameEngine;
+package gameEngine.components.callbacks;
+
+import gameEngine.GameObject;
 
 /**
  * Created by roscale on 4/21/17.

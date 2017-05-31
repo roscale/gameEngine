@@ -1,4 +1,4 @@
-package gameEngine;
+package gameEngine.util;
 
 /**
  * Created by roscale on 5/3/17.

@@ -1,5 +1,14 @@
-package gameEngine;
+package gameEngine.components;
 
+import gameEngine.*;
+import gameEngine.GameObject;
+import gameEngine.components.callbacks.IDrawable;
+import gameEngine.managers.DrawingManager;
+import gameEngine.managers.SpriteManager;
+import gameEngine.util.Counter;
+import gameEngine.util.Helper;
+import gameEngine.util.Sprite;
+import gameEngine.util.Timer;
 import processing.core.PVector;
 
 /**

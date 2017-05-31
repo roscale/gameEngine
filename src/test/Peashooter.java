@@ -1,6 +1,10 @@
 package test;
 
-import gameEngine.*;
+import gameEngine.components.*;
+import gameEngine.GameObject;
+import gameEngine.util.Helper;
+import gameEngine.util.IRaycastCondition;
+import gameEngine.util.Raycast;
 import processing.core.PVector;
 
 /**

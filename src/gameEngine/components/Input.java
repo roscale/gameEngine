@@ -1,5 +1,10 @@
-package gameEngine;
+package gameEngine.components;
 
+import gameEngine.Component;
+import gameEngine.GameObject;
+import gameEngine.util.Helper;
+import gameEngine.World;
+import gameEngine.managers.InputManager;
 import processing.core.PVector;
 
 /**
@@ -8,19 +13,15 @@ import processing.core.PVector;
 
 public class Input extends Component
 {
-	PVector relPos = new PVector(0, 0);
-	PVector size = new PVector(0, 0);
+	private PVector size = new PVector(0, 0);
 
-	Input(GameObject gameObject)
+	public Input(GameObject gameObject)
 	{
 		super(gameObject);
 		addToManager(InputManager.instance());
 	}
 
-	public PVector getPosition() { return PVector.add(gameObject.transform.getPosition(), relPos); }
 	public PVector getSize() { return size; }
-
-	public void setRelativePosition(PVector newPos) { relPos.set(newPos); }
 	public void setSize(PVector newSize) { size.set(newSize); }
 
 	@Override

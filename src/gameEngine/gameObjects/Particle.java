@@ -1,4 +1,10 @@
-package gameEngine;
+package gameEngine.gameObjects;
+
+import gameEngine.GameObject;
+import gameEngine.Object;
+import gameEngine.util.Sprite;
+import gameEngine.components.Physics;
+import gameEngine.components.SpriteRenderer;
 
 /**
  * Created by roscale on 5/25/17.

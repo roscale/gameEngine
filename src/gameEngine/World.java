@@ -1,5 +1,7 @@
 package gameEngine;
 
+import gameEngine.managers.DrawingManager;
+import gameEngine.util.Raycast;
 import processing.core.PApplet;
 
 import java.util.ArrayList;

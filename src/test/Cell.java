@@ -1,8 +1,8 @@
 package test;
 
-import gameEngine.Collider;
+import gameEngine.components.Collider;
 import gameEngine.GameObject;
-import gameEngine.ICollider;
+import gameEngine.components.callbacks.ICollider;
 import processing.core.PVector;
 
 /**

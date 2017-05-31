@@ -1,4 +1,4 @@
-package gameEngine;
+package gameEngine.components.callbacks;
 
 /**
  * Created by roscale on 5/6/17.

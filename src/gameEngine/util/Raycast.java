@@ -1,5 +1,9 @@
-package gameEngine;
+package gameEngine.util;
 
+import gameEngine.World;
+import gameEngine.components.Collider;
+import gameEngine.GameObject;
+import gameEngine.managers.CollisionManager;
 import processing.core.PVector;
 
 import java.util.ArrayList;

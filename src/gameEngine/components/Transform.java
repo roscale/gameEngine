@@ -1,5 +1,10 @@
-package gameEngine;
+package gameEngine.components;
 
+import gameEngine.Component;
+import gameEngine.GameObject;
+import gameEngine.util.Helper;
+import gameEngine.World;
+import gameEngine.managers.DrawingManager;
 import processing.core.PVector;
 
 /**

@@ -1,5 +1,10 @@
-package gameEngine;
+package gameEngine.managers;
 
+import gameEngine.Component;
+import gameEngine.ComponentManager;
+import gameEngine.util.Helper;
+import gameEngine.components.callbacks.IInput;
+import gameEngine.components.Input;
 import processing.core.PVector;
 import processing.event.MouseEvent;
 

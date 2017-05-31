@@ -1,4 +1,8 @@
-package gameEngine;
+package gameEngine.managers;
+
+import gameEngine.Component;
+import gameEngine.ComponentManager;
+import gameEngine.components.SpriteRenderer;
 
 import java.util.ArrayList;
 

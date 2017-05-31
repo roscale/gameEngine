@@ -1,6 +1,8 @@
 package test;
 
 import gameEngine.*;
+import gameEngine.gameObjects.Particle;
+import gameEngine.managers.InputManager;
 import processing.core.PApplet;
 import processing.event.MouseEvent;
 

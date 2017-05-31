@@ -1,4 +1,11 @@
-package gameEngine;
+package gameEngine.managers;
+
+import gameEngine.*;
+import gameEngine.components.Collider;
+import gameEngine.Component;
+import gameEngine.GameObject;
+import gameEngine.components.callbacks.ICollider;
+import gameEngine.util.Helper;
 
 import java.lang.*;
 import java.util.ArrayList;
@@ -53,7 +60,7 @@ public class CollisionManager extends ComponentManager
 				i++;
 		}
 
-		// Update gameobjects already in collision
+		// Update gameObjects already in collision
 		for (GameObject obj : col.collisions)
 		{
 			ICollider callback = (ICollider) obj;
@@ -116,18 +123,18 @@ public class CollisionManager extends ComponentManager
 
 class Pair
 {
-	public Collider first;
-	public Collider second;
+	Collider first;
+	Collider second;
 
-	public Pair(Collider first, Collider second)
+	Pair(Collider first, Collider second)
 	{
 		this.first = first;
 		this.second = second;
 	}
 
-	public boolean contains(Collider col) { return first == col || second == col; }
+	boolean contains(Collider col) { return first == col || second == col; }
 
-	public Collider getOther(Collider col)
+	Collider getOther(Collider col)
 	{
 		if (first == col)
 			return second;
@@ -139,9 +146,12 @@ class Pair
 	@Override
 	public boolean equals(java.lang.Object other)
 	{
+		if (!(other instanceof Pair))
+			throw new RuntimeException("Comparing a pair to " + other.getClass());
+
 		Pair p = (Pair) other;
-		if (p == null)
-			return false;
+//		if (p == null)
+//			return false;
 
 		return (first == p.first && second == p.second) ||
 				(first == p.second && second == p.first);

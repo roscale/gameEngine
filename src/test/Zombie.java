@@ -1,6 +1,7 @@
 package test;
 
-import gameEngine.*;
+import gameEngine.components.*;
+import gameEngine.GameObject;
 import processing.core.PVector;
 import processing.event.MouseEvent;
 
@@ -22,7 +23,7 @@ class Zombie extends Living
 		getComponent(Collider.class).setSize(new PVector(50, 135));
 
 //		getComponent(Collider.class).setSize(getComponent(SpriteRenderer.class).getSpriteSize());
-		getComponent(Input.class).setRelativePosition(new PVector(120, 20));
+		getComponent(Input.class).setOffset(new PVector(120, 20));
 		getComponent(Input.class).setSize(new PVector(20, 20));
 	}
 

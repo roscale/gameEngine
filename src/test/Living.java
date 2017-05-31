@@ -1,6 +1,14 @@
 package test;
 
 import gameEngine.*;
+import gameEngine.components.Collider;
+import gameEngine.components.Input;
+import gameEngine.components.SpriteRenderer;
+import gameEngine.components.Transform;
+import gameEngine.GameObject;
+import gameEngine.components.callbacks.ICollider;
+import gameEngine.components.callbacks.IInput;
+import gameEngine.util.Helper;
 import processing.core.PVector;
 import processing.event.MouseEvent;
 
@@ -17,7 +25,7 @@ abstract class Living extends GameObject implements ICollider, IInput
 		addComponent(Collider.class);
 	}
 
-	// gameEngine.IInput
+	// gameEngine.components.callbacks.IInput
 	@Override
 	public void mouseDragged(MouseEvent event)
 	{

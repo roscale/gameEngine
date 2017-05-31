@@ -11,11 +11,11 @@ public abstract class Component extends Object implements Comparable<Component>
 {
 	public GameObject gameObject;
 	public ArrayList<ComponentManager> managers = new ArrayList<>();
-	public PVector offset = new PVector();
 	public boolean enabled = true;
-	public Class c = getClass();
 
-	Component(GameObject gameObject)
+	public PVector offset = new PVector();
+
+	public Component(GameObject gameObject)
 	{
 		this.gameObject = gameObject;
 	}

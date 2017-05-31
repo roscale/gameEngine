@@ -1,4 +1,4 @@
-package gameEngine;
+package gameEngine.components.callbacks;
 
 import processing.event.MouseEvent;
 
